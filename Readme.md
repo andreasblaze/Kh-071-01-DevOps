@@ -31,19 +31,24 @@ more command is used to view the text files in the command prompt, displaying on
 
 # Task1.Part2 
 ## 1) Examine the tree command. Master the technique of applying a template, for example, display all files that contain a character c, or files that contain a specific sequence of characters. List subdirectories of the root directory up to and including the second nesting level. 
-
+The tree is a tiny, cross-platform command-line program used to recursively list or display the content of a directory in a tree-like format. It outputs the directory paths and files in each sub-directory and a summary of a total number of sub-directories and files.
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/img/1.12.jpg)
 ## 2) What command can be used to determine the type of file (for example, text or binary)? Give an example.
-
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/img/1.13.jpg)
 ## 3) Master the skills of navigating the file system using relative and absolute paths. How can you go back to your home directory from anywhere in the filesystem? 
-
+Absolute Path - /etc/passwd
+Relative Path - Relative path is defined as path related to the present working directory(pwd): pwd/var/logcd kernel
+I can go back to my home directory from anywhere in the filesystem using cd ~
 ## 4) Become familiar with the various options for the ls command. Give examples of listing directories using different keys. Explain the information displayed on the terminal using the -l and -a switches.
-
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/img/1.14.jpg)
 ## 5) Perform the following sequence of operations: - create a subdirectory in the home directory; - in this subdirectory create a file containing information about directories located in the root directory (using I/O redirection operations); 
 
 - view the created file; 
 - copy the created file to your home directory using relative and absolute addressing. 
 - delete the previously created subdirectory with the file requesting removal; 
 - delete the file copied to the home directory. 
+
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/img/1.15.jpg)
 
 ## 6) Perform the following sequence of operations: 
 

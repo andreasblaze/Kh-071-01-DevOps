@@ -78,16 +78,31 @@ usermod[-c uidcomment] [-d dir[-m]] [-e expire] [-f inactive] [-g gid] [-G gid[,
 usermod -l login-name old-name
 
 ## 7) What is skell_dir? What is its structure?
+Directory /etc/skel/ (skel is derived from the “skeleton”) is used to initiate home directory when a user is first created.
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/2.1.jpg)
 
 ## 8) How to remove a user from the system (including his mailbox)? 
+userdel -r username
 
 ## 9) What commands and keys should be used to lock and unlock a user account? 
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/2.2.jpg)
 
 ## 10) How to remove a user's password and provide him with a password-free login for subsequent password change? 
+### passwd -e user1
+### chage -l user1
 
 ## 11) Display the extended format of information about the directory, tell about the information columns displayed on the terminal. 
-
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/2.3.jpg)
+### Permissions, gid, user, store, mod data and time, directories
 ## 12) What access rights exist and for whom (i. e., describe the main roles)? Briefly describe the acronym for access rights. 
+### The Linux filesystem gives us three types of permissions. Here is a simplified review:
+- User (or user owner)
+- Group (or owner group)
+- Other (everyone else)
+### With these permissions, we can grant three (actually five, but we’ll get to that in a minute) types of access:
+- Read
+- Write
+- eXecute
 
 ## 13) What is the sequence of defining the relationship between the file and the user? 
 
@@ -98,3 +113,36 @@ usermod -l login-name old-name
 ## 16) Give definitions of sticky bits and mechanism of identifier substitution. Give an example of files and directories with these attributes. 
 
 ## 17) What file attributes should be present in the command script?
+
+## Part1
+## 1. How many states could has a process in Linux?
+
+## 2. Examine the pstree command. Make output (highlight) the chain (ancestors) of the current process.
+
+## 3. What is a proc file system? 4. Print information about the processor (its type, supported technologies, etc.).
+
+## 5. Use the ps command to get information about the process. The information should be as follows: the owner of the process, the arguments with which the process was launched for execution, the group owner of this process, etc. 6. How to define kernel processes and user processes?
+
+## 7. Print the list of processes to the terminal. Briefly describe the statuses of the processes. What condition are they in, or can they be arriving in?
+
+## 8. Display only the processes of a specific user. 9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?
+
+## 10. What information does top command display?
+
+## 12. Display the processes of the specific user using the top command.
+
+## 12. What interactive commands can be used to control the top command? Give a couple of examples. 13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
+
+## 14. Concept of priority, what commands are used to set priority?
+
+## 15. Can I change the priority of a process using the top command? If so, how? 16. Examine the kill command. How to send with the kill command process control signal? Give an example of commonly used signals.
+
+## 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to demonstrate the process control mechanism with fg, bg.
+
+## Part2
+
+## 1. Check the implementability of the most frequently used OPENSSH commands in the MS Windows operating system. (Description of the expected result of the commands + screenshots: command – result should be presented)
+
+## 2. Implement basic SSH settings to increase the security of the client-server connection (at least 3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
+
+## 4. Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.

@@ -127,28 +127,41 @@ roles " u"," g"," and " a"( which corresponds to ugo for which access is being c
 ![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/2.5.jpg)
 ## 17) What file attributes should be present in the command script?
 All twelve attributes can be represented as bits of a binary number, equal to 1 if the attribute is set, and 0 if not The order of the bits is as follows sU | sG | t | rU | wU | xU | rG | wG || xG | rO | wO | xO, where sU is SetUID, sG is SetGID, t is a t attribute (ls dl then the directory is displayed as a file), than three triples of access attributes
+
+# Task3
 ## Part1
 ## 1. How many states could has a process in Linux?
-
+Two types of processes in Linux: foreground and background
 ## 2. Examine the pstree command. Make output (highlight) the chain (ancestors) of the current process.
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.1.jpg)
+## 3. What is a proc file system? 
+The proc file system acts as an interface to internal data structures in the kernel. It can be used to obtain information about the system and to change certain kernel parameters at runtime (sysctl). 
+## 4. Print information about the processor (its type, supported technologies, etc.).
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.2.jpg)
 
-## 3. What is a proc file system? 4. Print information about the processor (its type, supported technologies, etc.).
+## 5. Use the ps command to get information about the process. The information should be as follows: the owner of the process, the arguments with which the process was launched for execution, the group owner of this process, etc. 
 
-## 5. Use the ps command to get information about the process. The information should be as follows: the owner of the process, the arguments with which the process was launched for execution, the group owner of this process, etc. 6. How to define kernel processes and user processes?
+## 6. How to define kernel processes and user processes?
 
 ## 7. Print the list of processes to the terminal. Briefly describe the statuses of the processes. What condition are they in, or can they be arriving in?
 
-## 8. Display only the processes of a specific user. 9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?
+## 8. Display only the processes of a specific user. 
+
+## 9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?
 
 ## 10. What information does top command display?
 
-## 12. Display the processes of the specific user using the top command.
+## 11. Display the processes of the specific user using the top command.
 
-## 12. What interactive commands can be used to control the top command? Give a couple of examples. 13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
+## 12. What interactive commands can be used to control the top command? Give a couple of examples. 
+
+## 13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
 
 ## 14. Concept of priority, what commands are used to set priority?
 
-## 15. Can I change the priority of a process using the top command? If so, how? 16. Examine the kill command. How to send with the kill command process control signal? Give an example of commonly used signals.
+## 15. Can I change the priority of a process using the top command? If so, how? 
+
+## 16. Examine the kill command. How to send with the kill command process control signal? Give an example of commonly used signals.
 
 ## 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to demonstrate the process control mechanism with fg, bg.
 
@@ -156,6 +169,8 @@ All twelve attributes can be represented as bits of a binary number, equal to 1 
 
 ## 1. Check the implementability of the most frequently used OPENSSH commands in the MS Windows operating system. (Description of the expected result of the commands + screenshots: command – result should be presented)
 
-## 2. Implement basic SSH settings to increase the security of the client-server connection (at least 3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
+## 2. Implement basic SSH settings to increase the security of the client-server connection (at least 
+
+## 3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
 
 ## 4. Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.

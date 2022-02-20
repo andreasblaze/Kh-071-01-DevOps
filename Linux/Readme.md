@@ -105,15 +105,28 @@ userdel -r username
 - eXecute
 
 ## 13) What is the sequence of defining the relationship between the file and the user? 
+### When the relationship between the file and the user who started the process, the role is determined as follows
+### If the UID of the file is the same as the UID of the process, the user is the owner of the file
+### If the GID of the file matches the GID of any group the user belongs to, he is a member of the group to which the file belongs
+### If neither the UID no the GID of a file overlaps with the UID of the process and the list of groups that the user running it belongs to, that user is an outsider
 
 ## 14) What commands are used to change the owner of a file (directory), as well as the mode of access to the file? Give examples, demonstrate on the terminal. 
+Permissions can be changed using three commands chown (change owner), chgrp (change group), and
+chmod with extended parameter format before the access part (before the or sign), can list the
+roles " u"," g"," and " a"( which corresponds to ugo for which access is being changed
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/2.4.jpg)
 
 ## 15) What is an example of octal representation of access rights? Describe the umask command. 
+### The same bitwise representation of attributes regulates the default access rights when creating files and
+### directories This is done using the umask command The only umask parameter is an octal number that
+### specifies the attributes that should not be set on a new file 666 or directory 777
+### For example, umask 0 will cause files to be created with rw rw rw attributes and directories rwxrwxrwx
 
 ## 16) Give definitions of sticky bits and mechanism of identifier substitution. Give an example of files and directories with these attributes. 
-
+### Sticky Bit is mainly used on folders in order to avoid deletion of a folder and it’s content by other users though they having write permissions on the folder contents If ### Sticky bit is enabled on a folder, the folder contents are deleted by only owner who created them and the root user No one else can delete other users data in this folder(Where sticky bit is set) This is a security measure to avoid deletion of critical folders and their content(sub folders and files), though other users have full permissions
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/2.5.jpg)
 ## 17) What file attributes should be present in the command script?
-
+All twelve attributes can be represented as bits of a binary number, equal to 1 if the attribute is set, and 0 if not The order of the bits is as follows sU | sG | t | rU | wU | xU | rG | wG || xG | rO | wO | xO, where sU is SetUID, sG is SetGID, t is a t attribute (ls dl then the directory is displayed as a file), than three triples of access attributes
 ## Part1
 ## 1. How many states could has a process in Linux?
 

@@ -16,7 +16,7 @@ man:
 -f option: One may not be able to remember the sections in which a command is present. So this option gives the section in which the given command is present.
 ![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/1.5.jpg)
 -a option: This option helps us to display all the available intro manual pages in succession.
-![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/img/Linux/1.6.jpg)
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/1.6.jpg)
 ## 6) Explore the more and less commands using the help system. View the contents of files .bash* using commands. 
 One of the reasons why less was introduced was to allow backward movement line by line. It has a lot of commands that are similar to the vi text editor’s commands, and it supports horizontal scrolling, live monitoring, and more.
 ![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/1.7.jpg)

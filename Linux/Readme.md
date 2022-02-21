@@ -139,18 +139,28 @@ The proc file system acts as an interface to internal data structures in the ker
 ## 4. Print information about the processor (its type, supported technologies, etc.).
 ![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.2.jpg)
 
-## 5. Use the ps command to get information about the process. The information should be as follows: the owner of the process, the arguments with which the process was launched for execution, the group owner of this process, etc. 
+## 5. Use the ps command to get information about the process. The information should be as follows: the owner of the process, the arguments with which the process was launched for execution, the group owner of this process, etc.
+ ![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.3.jpg)
 
 ## 6. How to define kernel processes and user processes?
+Kernel processes are a part of the Linux kernel, and each of them is started with its own process identification number (PID). When managing processes, it is easy to recognize the kernel processes because they have a name that is between square brackets. Listing shows a list of a few
 
 ## 7. Print the list of processes to the terminal. Briefly describe the statuses of the processes. What condition are they in, or can they be arriving in?
-
+PID – the unique process ID 
+TTY – terminal type that the user is logged into 
+TIME – amount of CPU in minutes and seconds that the process has been running 
+CMD – name of the command that launched the process. 
+Note – Sometimes when we execute ps command, it shows TIME as 00:00:00. It is nothing but the total accumulated CPU utilization time for any process and 00:00:00 indicates no CPU time has been given by the kernel till now. In above example we found that, for bash no CPU time has been given. This is because bash is just a parent process for different processes which needs bash for their execution and bash itself is not utilizing any CPU time till now. 
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.4.jpg)
 ## 8. Display only the processes of a specific user. 
-
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.5.jpg)
 ## 9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?
-
+### If you are looking for a short summary of the active processes, use ps aux.
+### If you are not only looking for the name of the process but also for the exact command that was used to start the process, use ps ef .
+### Alternative ways to use ps exist as well, such as the command ps fax , which shows hierarchical relationships between parent and child
 ## 10. What information does top command display?
-
+top command is used to show the Linux processes. It provides a dynamic real-time view of the running system. Usually, this command shows the summary information of the system and the list of processes or threads which are currently managed by the Linux Kernel.
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.6.jpg)
 ## 11. Display the processes of the specific user using the top command.
 
 ## 12. What interactive commands can be used to control the top command? Give a couple of examples. 

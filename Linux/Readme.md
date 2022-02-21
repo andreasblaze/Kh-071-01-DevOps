@@ -162,17 +162,31 @@ Note – Sometimes when we execute ps command, it shows TIME as 00:00:00. It is 
 top command is used to show the Linux processes. It provides a dynamic real-time view of the running system. Usually, this command shows the summary information of the system and the list of processes or threads which are currently managed by the Linux Kernel.
 ![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.6.jpg)
 ## 11. Display the processes of the specific user using the top command.
+top -U root
+![Image](https://github.com/andreasblaze/Kh-071-01-DevOps/raw/main/Linux/img/3.7.jpg)
+## 12. What interactive commands can be used to control the top command? Give a couple of examples.
+Now that you know how to use the kill and nice commands from the command line, using the same functionality from top is even easier. From top , type k . top will then prompt for the PID of the process you want to send a signal to. By default, the most active process is selected. After you enter the PID, top asks which signal you want to send. By default, signal 15 for SIGTERM is used. However, if you want to insist a bit more, you can type 9 for SIGKILL. Then press Enter to terminate the process. To renice a running process from top, type r . You are first prompted for the PID of the process you want to renice. After entering the PID, you are prompted for the nice value you want to use. Enter a positive value to increase process priority or a negative value to decrease process priority.
 
-## 12. What interactive commands can be used to control the top command? Give a couple of examples. 
 
 ## 13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
+To sort all Linux running processes by Process ID, press M and T keys.
+To sort all Linux running processes by Memory usage, press M and P keys.
+<Shift> + <N> - sort by PID ;
+<Shift> + <P> - sort by CPU usage ;
+<Shift> + <M> sort by Memory usage;
+<Shift> +<T> sort by Time usage;
+<Shift> + <Z> - change colors;
+<c> - display absolute path of command;
+And more hotkeys are available.
 
 ## 14. Concept of priority, what commands are used to set priority?
-
+When Linux processes are started, they are started with a specific priority By default, all regular processes are equal and are started with the same priority, which is the priority number 20 In some cases, it is useful to change the default priority that was assigned to the process when it was started You can do that using the nice and renice commands Use nice if you want to start a process with an adjusted priority Use renice to change the priority for a currently active process Alternatively, you can use the r command from the top utility to change the priority of a currently running process When using nice or renice to adjust process priority, you can select from values ranging from 20 to 19 The default niceness of a process is set to 0 (which results in the priority value of 20 By applying a negative niceness, you increase the priority Use a positive niceness to decrease the priority It is a good idea not to use the ultimate values immediately Instead, use increments of 5 and see how it affects the application
 ## 15. Can I change the priority of a process using the top command? If so, how? 
+### You can change the process priority using nice and renice utility. Nice command will launch a process with an user defined scheduling priority. Renice command will modify the scheduling priority of a running process. Linux Kernel schedules the process and allocates CPU time accordingly for each of them.
+### To renice a running process from top, type r . You are first prompted for the PID of the process you want to renice . After entering the PID, you are prompted for the nice value you want to use. Enter a positive value to increase process priority or a negative value to decrease process priority.
 
 ## 16. Examine the kill command. How to send with the kill command process control signal? Give an example of commonly used signals.
-
+Now that you know how to use the kill and nice commands from the command line, using the same functionality from top is even easier. From top , type k . top will then prompt for the PID of the process you want to send a signal to. By default, the most active process is selected. After you enter the PID, top asks which signal you want to send. By default, signal 15 for SIGTERM is used. However, if you want to insist a bit more, you can type 9 for SIGKILL. Then press Enter to terminate the process.
 ## 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to demonstrate the process control mechanism with fg, bg.
 
 ## Part2
